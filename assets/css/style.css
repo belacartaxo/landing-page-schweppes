@@ -14,6 +14,8 @@ body{
     margin: 20px 50px;
     font-family: 'Poppins', sans-serif;
     color: white;
+    transition: background 0.9s;
+    position: relative;
 }
 
 header {
@@ -21,6 +23,7 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
 header ul{
     display: flex;
     justify-content: space-between;
@@ -29,12 +32,16 @@ header ul{
 
 header ul li {
     list-style-type: none;
-    transition: all 0.5s;
+    transition: scale 0.5s;
 }
 
 header ul a {
     text-decoration: none;
     color: white
+}
+
+#menu-mobile{
+    display: none;
 }
 
 main section#content{
@@ -78,15 +85,21 @@ main #text-content button:hover{
     transition: all 0.5s;
 }
 
+main #schweppes-img{
+    margin: auto;
+}
+
 main #social-media{
     display: flex;
     flex-direction: column;
+    position: fixed;
+    right: 40px;
 }
 
 main #social-media img{
     padding: 8px 0px;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: scale 0.3s;
 }
 
 main section#schweppes-icons{
@@ -98,7 +111,7 @@ main section#schweppes-icons{
 main section#schweppes-icons img {
     padding: 0px 15px;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: scale 0.3s;
 }
 
 .scale1:hover{
@@ -111,4 +124,167 @@ main section#schweppes-icons img {
 
 .chosen{
     scale: 1.1;
+}
+
+
+@media only screen and (max-width:1000px) {
+    header ul{
+        width: 60vw;
+    }
+
+    main section#content{
+        height: 65vh;
+        margin-bottom: 40px;
+    }
+
+    main #text-content h1{
+        font-size: 2.4em;
+        line-height: 40px;
+    }
+    main #text-content h2{
+        font-size: 1.5em;
+    }
+
+    main #main-image{
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    body{
+        overflow-y: visible;
+        height: fit-content;
+    }
+
+    #menu-bar{
+        display: none;
+    }
+
+    #menu-mobile{
+        display: block;
+    }
+
+    #menu{
+        width: 35px;
+        height: 30px;
+    }
+
+    #menu-bar-mobile nav{
+        display: none;
+        transition: 0.3s ease;
+    }
+
+    #menu-bar-mobile nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    #menu-bar-mobile{
+        text-align: right;
+    }
+
+    #menu-bar-mobile, #menu-bg{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        padding-right: 30px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .bar{
+        width: 100%;
+        height: 5px;
+        background-color: whitesmoke;
+        display: block;
+        border-radius: 5px;
+        transition: ease;
+    }
+
+    #menu:hover .bar{
+        background-color: rgb(226, 180, 101);
+    }
+
+    #bar1{
+        transform: translateY(-4px);
+    }
+    
+    #bar3{
+        transform: translateY(4px);
+    }
+
+    #menu-bg{
+        z-index: 1;
+        width: 0;
+        height: 0;
+        background-color: rgba(226, 180, 101, 0.729);
+        border-radius: 50%;
+        transition: 0.5s ease;
+    }
+
+    #menu-bar-mobile{
+        z-index: 2;
+    }
+
+    #menu-bg.change-bg{
+        width: 550px;
+        height: 540px;
+        transform: translate(70%, -40%);
+    }
+
+    #menu-bar-mobile nav.change{
+        display: block;
+    }
+
+    .change #bar1{
+        transform: translateY(4px) rotateZ(45deg);
+    }
+
+    .change #bar2{
+        transform: rotateZ(-45deg);
+    }
+
+    .change #bar3{
+        display: none;
+    }
+
+    main section#content{
+        display: block;
+        height: auto;
+    }
+
+    main #text-content{
+        margin-top: 40px;
+        width: 90%;
+    }
+
+    main #schweppes-img{
+        margin-top: 60px;
+        display: flex;
+        justify-content: center;
+    }
+
+    main #social-media{
+        bottom: 20px;
+    }
+    
+    main #schweppes-icons{
+        margin: 30px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    main #text-content{
+        margin-top: 40px;
+        width: fit-content;
+    }
+
+    main #text-content h1{
+        font-size: 2em;
+        line-height: 35px;
+        word-spacing: 0.25em;
+    }
 }
