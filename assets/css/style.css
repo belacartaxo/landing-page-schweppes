@@ -108,3 +108,7 @@ main section#schweppes-icons img {
 .scale2:hover{
     scale: 1.2;
 }
+
+.chosen{
+    scale: 1.1;
+}
