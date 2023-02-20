@@ -94,6 +94,7 @@ main #social-media{
     flex-direction: column;
     position: fixed;
     right: 40px;
+    z-index: 2;
 }
 
 main #social-media img{
@@ -156,6 +157,12 @@ main section#schweppes-icons img {
         height: fit-content;
     }
 
+    header ul{
+        width: 155px;
+        margin: 20px auto;
+    }
+       
+
     #menu-bar{
         display: none;
     }
@@ -167,13 +174,36 @@ main section#schweppes-icons img {
     #menu{
         width: 35px;
         height: 30px;
+        padding: 2px;
+        cursor: pointer;
+    }
+    
+    #menu:hover .bar{
+        background-color: #141E26;
+    }
+
+    .bar{
+        display: block;
+        background-color: white;
+        width: 100%;
+        height: 5px;
+        border-radius: 5px;
+        transition: 0.5s ease;
+    }
+
+    .bar1{
+        transform: translateY(-4px);
+    }
+
+    .bar3{
+        transform: translateY(4px);
     }
 
     #menu-bar-mobile nav{
         display: none;
         transition: 0.3s ease;
     }
-
+    
     #menu-bar-mobile nav ul{
         display: flex;
         flex-direction: column;
@@ -183,72 +213,55 @@ main section#schweppes-icons img {
 
     #menu-bar-mobile{
         text-align: right;
+        top: 30px;
+        right: -20px;
     }
-
+    
     #menu-bar-mobile, #menu-bg{
         display: flex;
         flex-direction: column;
         align-items: end;
         padding-right: 30px;
         position: absolute;
-        top: 0;
-        right: 0;
-    }
-
-    .bar{
-        width: 100%;
-        height: 5px;
-        background-color: whitesmoke;
-        display: block;
-        border-radius: 5px;
-        transition: ease;
-    }
-
-    #menu:hover .bar{
-        background-color: rgb(226, 180, 101);
-    }
-
-    #bar1{
-        transform: translateY(-4px);
-    }
-    
-    #bar3{
-        transform: translateY(4px);
     }
 
     #menu-bg{
+        position: fixed;
         z-index: 1;
         width: 0;
         height: 0;
-        background-color: rgba(226, 180, 101, 0.729);
-        border-radius: 50%;
+        top: 250px;
+        right: 0;
+        background-color: #F2B705;
         transition: 0.5s ease;
     }
 
     #menu-bar-mobile{
         z-index: 2;
+        position: fixed;
     }
 
     #menu-bg.change-bg{
-        width: 550px;
-        height: 540px;
+        width: 600px;
+        height: 130vh;
         transform: translate(70%, -40%);
     }
 
     #menu-bar-mobile nav.change{
         display: block;
+        
     }
 
-    .change #bar1{
+    .change .bar1{
         transform: translateY(4px) rotateZ(45deg);
     }
 
-    .change #bar2{
-        transform: rotateZ(-45deg);
+    .change .bar2{
+        opacity: 0;
     }
 
-    .change #bar3{
-        display: none;
+    .change .bar3{
+        transform: translateY(-5px) rotateZ(-45deg);
     }
 
     main section#content{
