@@ -200,8 +200,10 @@ main section#schweppes-icons img {
     }
 
     #menu-bar-mobile nav{
-        display: none;
+        position: absolute;
         transition: 0.3s ease;
+        top: 30px;
+        right: -200%;
     }
     
     #menu-bar-mobile nav ul{
@@ -247,7 +249,8 @@ main section#schweppes-icons img {
 
     #menu-bar-mobile nav.change{
         display: block;
-        
+        right: 25px;
+        transition: 0.5s ease;
     }
 
     .change .bar1{
