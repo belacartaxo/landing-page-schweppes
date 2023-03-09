@@ -139,11 +139,15 @@ main section#schweppes-icons img {
     }
 
     main #text-content h1{
-        font-size: 2.4em;
+        font-size: 2em;
         line-height: 40px;
     }
     main #text-content h2{
-        font-size: 1.5em;
+        font-size: 1.3em;
+    }
+
+    main #text-content p{
+        font-size: 0.8em;
     }
 
     main #main-image{
